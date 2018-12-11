@@ -1,0 +1,49 @@
+server:
+  port: 8083
+  servlet:
+    path: /dev
+spring:
+  mvc:
+    view:
+      prefix: /
+      suffix: .html
+  datasource:
+    url: jdbc:mysql://47.97.117.205:3306/user?useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: root
+    password: Yang123~
+  thymeleaf:
+    cache: false
+  #配置redis
+  redis:
+    host: 47.97.117.205
+    port: 6379
+    password: 9wwep5NBDAkhhiKs
+
+
+logging:
+  file: demo.log
+  level:
+    com.cn.demo: debug
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.cn.demo.model
+  # 驼峰命名规范
+  configuration:
+    map-underscore-to-camel-case: true
+mapper:
+  #主键自增会写方法
+  identity: MYSQL
+  mappers: tk.mybatis.mapper.common.BaseMapper
+  #设备添加更新方法是否判断字符串类型!=''
+  not-empty: true
+  # 枚举按简单类型处理
+  enum-as-simple-type: true
+  #分页插件https://github.com/pagehelper/Mybatis-PageHelper/blob/master/wikis/zh/HowToUse.md
+pagehelper:
+  helper-dialect: mysql
+  params:
+  reasonable: true
+  support-methods-arguments: true
+  row-bounds-with-count: true
+  page-size-zero: true
+

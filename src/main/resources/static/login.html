@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="${pageContext.request.contextPath}/view/sendEmail" method="post">
+    请输入要发送的邮件地址：<input type="text" name="email"><br/>
+    请输入要发送的邮件内容：<input type="text" name="emailMsg"><br/>
+    <input type="submit" value="点击发送邮件"/>
+</form>
+</body>
+</html>

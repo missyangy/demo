@@ -1,0 +1,4 @@
+server:
+  servlet:
+    path: /test
+  port: 8084

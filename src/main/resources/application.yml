@@ -1,0 +1,24 @@
+server:
+  port: 8082
+  servlet:
+    path: /user
+model:
+  name: yang
+  age: 18
+  passWorld: 123456
+  phone: 12345678901
+spring:
+  profiles:
+    active: dev
+mail:
+  username: yang
+  email: dlp1523@126.com
+  send-ee: dlp1523@163.com,donglianpo@wanmagroup.com
+  send-cc: dlp1523@126.com
+  subject: 双十一零食大礼包
+
+debug: false
+
+
+
+
