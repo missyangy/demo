@@ -17,13 +17,13 @@ import java.io.PrintWriter;
  * @author: DongLianPo
  * @create: 2018/12/11 13:16
  **/
-@WebFilter(filterName = "test", urlPatterns = "/*")
+@WebFilter(filterName = "test", urlPatterns = "/test")
 @Order(1)
 public class testFilter implements Filter {
     private Logger logger = LoggerFactory.getLogger(testFilter.class);
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {
+    public void init(FilterConfig filterConfig) {
 
     }
 
@@ -33,7 +33,7 @@ public class testFilter implements Filter {
         HttpServletResponse httpServletResponse = (HttpServletResponse) servletResponse;
         String ext = httpServletRequest.getParameter("ext");
         String constant = "t";
-        String method = "post";
+        String method = "POST";
         if (constant.equals(ext)) {
             return;
         } else if (!method.equalsIgnoreCase(httpServletRequest.getMethod())) {
